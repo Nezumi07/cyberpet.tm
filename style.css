@@ -18,6 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; 
+    flex-wrap; wrap;
     /* margin: 0 auto; */
 }
 
@@ -29,7 +30,8 @@ main {
     rgb(187, 185, 185)); */
     text-align: center;
     padding: 60px ; 
-    height: 620px;
+    height: 500px;
+    width: 330px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -72,16 +74,16 @@ h1 {
 
 h2 {
     font-family: 'VT323' , serif;
-    font-size: 45px;
+    font-size: 35px;
     letter-spacing: 1px;
     /* padding-right: 25%; */
-    margin-bottom: 8%;
+    margin-bottom: 5%;
     color:rgb(5, 65, 231);
     
 }
 
 button {
-    padding: 25px;
+    padding: 20px;
     color: white;
     font-size: 15px;
     background-image: radial-gradient( purple, indigo);
@@ -131,10 +133,14 @@ button:hover {
 
 img {
 
-    width: 290px;
-    height: 280px;
+    width: 280px;
+    height: 220px;
     border: 8px solid grey;
     outline: 4px solid darkgrey;
     border-radius: 10%;
     margin-bottom: 5%;
 }
+
+@media all and (max-width: 500px) {
+    
+    
