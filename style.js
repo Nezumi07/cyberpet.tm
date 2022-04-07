@@ -1,11 +1,9 @@
  //sounds
 
 let navOne = new Audio("sounds/nav1.wav")
-let nav2 = new Audio("sounds/nav2.wav")
-let nav3 = new Audio("sounds/nav3.wav")
 let drink = new Audio("sounds/drink.wav")
 let feed = new Audio("sounds/feed.wav")
-let nav3 = new Audio("sounds/play.wav")
+let play = new Audio("sounds/play.wav")
 let intro = new Audio("sounds/intro.wav")
 
 //music
