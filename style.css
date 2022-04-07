@@ -122,6 +122,14 @@ button:hover {
     /* font-size: 10px; */
 }
 
+
+.d-pad{
+
+
+    display: flex;
+    flex-direction: ;
+}
+
 /* #screen {
     background: green;
 
