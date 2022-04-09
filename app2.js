@@ -26,11 +26,12 @@ let petNameType = document.getElementById("petNameType")
 
 
 let min = 5;
-let max = 25;
+let mid = 8;
+let max = 24;
 
 // // different number range for creating cyberpet
 let createMin = 30;
-let createMax = 70;
+let createMax = 65;
 
 function randNumber (min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -63,17 +64,17 @@ class Cyberpet{
         // what do we want eat to do
         this._hunger += randNumber(min, max);
         this._thirst -= (min);
-        this._boredom -= (min);
+        this._boredom -= (mid);
         logOutput();
     }
     drink(){
         this._hunger -= (min);
         this._thirst += randNumber(min, max);
-        this._boredom -= (min);
+        this._boredom -= (mid);
         logOutput();
     }
     fun(){
-        this._hunger -= (min);
+        this._hunger -= (mid);
         this._thirst -= (min);
         this._boredom += randNumber(min, max);
         logOutput();
@@ -132,6 +133,7 @@ let myPetCreated = 0;
 
 function chooseAction(){
     if(action == "c"){
+        
         myPetCreate();
     }
     if  (action == "p"){
@@ -157,16 +159,19 @@ function chooseAction(){
 
 function myPetCreate(){
     if(myPetCreated == 0){
-        petType = prompt("Select Cyberpet Type: 1 for a Dog, 2 for a Cat, Any other key for a Rabbit");
+        petType = prompt("Please Select Cyberpet Type: 1 for a Dog. 2 for a Cat. Press Any other key for a Rabbit");
         if(petType == 1){
+            bgm1.play();
             pet = "Dog";
             myPet = new Dog(petName, pet);
         }
         else if(petType == 2){
+            bgm2.play();
             pet = "Cat";
             myPet = new Cat(petName, pet);
         }
         else{
+            bgm3.play();
             pet = "Rabbit";
             myPet = new Rabbit(petName, pet);
         }
@@ -177,7 +182,10 @@ function myPetCreate(){
         
         console.log(`starting hunger is ${myPet.hunger}`);
         petNameType.textContent = `${petName} the ${pet}`
-        logOutput()    }
+        logOutput()    
+
+    
+    }
     else{
         console.log(`You have already created a pet named ${petName}`);
     }
