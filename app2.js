@@ -38,6 +38,10 @@ function runPowerOn(){
     document.getElementById("intro").textContent = "Press C Key to START"
 }
 
+function refresh(){
+    location.reload()
+}
+
 let min = 5;
 let mid = 8;
 let max = 25;
@@ -133,21 +137,21 @@ class Dog extends Cyberpet{
     }
 }
 class Rabbit extends Cyberpet{
-    constructor (name,woof){ // change woof
+    constructor (name,levelup){ // change woof
         super(name);
-        this._woof = woof;
+        this._levelup = levelup;
         this._imageSrc = "images/rabbit/";
         }
         get imageSrc(){
         return this._imageSrc;
         }
-        get woof(){
-        return this._woof;
+        get levelup(){
+        return this._levelup;
         }
         speak(){
-        petWoof.play();
-
-        petWoof.currentTime = 0;
+        petLevel.play();
+        petLevel.volume = 0.03 ;       
+        petLevel.currentTime = 0;
         comsole.log("dog is barking mad")
     }
 }
