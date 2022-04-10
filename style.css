@@ -38,10 +38,11 @@ main {
     /* background-image: radial-gradient(lightgray,
     rgb(187, 185, 185)); */
     text-align: center;
-    padding: 30px ; 
+    padding: 1px ; 
     height: 570px;
     width: 350px;
     margin-top: 3%;
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -116,10 +117,12 @@ button {
     font-size: 16px;
     background-color: purple;
     margin-top: 6%;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     border: none;
     border-radius: 45%;
     cursor: pointer;
+    border: 1px solid rgb(223, 219, 219);
+    outline: 1px double rgb(189, 189, 189);
 }
 button:hover {
         /* background-image: red; */
@@ -137,9 +140,13 @@ button:hover {
   
 .powerOn {
 
-    width: 30%;
-    height: 40%;
+    width: 20%;
+    height:5%;
     animation: pulse 5s infinite;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    margin-right: 50%;
+    border-radius: 10%
 }
 
 @keyframes pulse {
@@ -201,12 +208,13 @@ color:red;
 
 img {
 
-    width: 310px;
-    height: 250px;
+    width: 315px;
+    height: 290px;
     border: 8px solid grey;
     outline: 4px solid darkgrey;
     border-radius: 10%;
     margin-bottom: 1%;
+    
 }
 
 @media all and (max-width: 500px) {}
