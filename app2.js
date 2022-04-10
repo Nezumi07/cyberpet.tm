@@ -7,7 +7,7 @@ let petDrink = new Audio("sounds/drink.wav");
 let petFeed = new Audio("sounds/feed.wav");
 let petMeow = new Audio("sounds/sleep.wav");
 let petWoof = new Audio("sounds/woof.wav");
-let power = new Audio("sounds/power.wav");
+let intro = new Audio("sounds/intro.mp3");
 
 //Music
 
@@ -27,7 +27,7 @@ let petNameType = document.getElementById("petNameType")
 
 let min = 5;
 let mid = 8;
-let max = 24;
+let max = 25;
 
 // // different number range for creating cyberpet
 let createMin = 30;
@@ -134,6 +134,7 @@ let myPetCreated = 0;
 function chooseAction(){
     if(action == "c"){
         
+        intro.play()
         myPetCreate();
     }
     if  (action == "p"){
