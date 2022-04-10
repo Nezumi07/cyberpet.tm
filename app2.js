@@ -6,7 +6,7 @@ let petPlay = new Audio("sounds/play.wav");
 let petDrink = new Audio("sounds/drink.wav");
 let petFeed = new Audio("sounds/feed.wav");
 let petMeow = new Audio("sounds/meow.wav");
-let petWoof = new Audio("sounds/woof.wav");
+let petWoof = new Audio("sounds/howl.wav");
 let intro = new Audio("sounds/intro.mp3");
 
 //Music
@@ -182,6 +182,7 @@ function chooseAction(){
     }
     else if(action == "s"){
         myPet.speak();
+        imageScreen.src = myPet.imageSrc + "speak.png";
     }
     action = "";
 }
