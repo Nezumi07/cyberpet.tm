@@ -79,7 +79,7 @@ main {
 .top{
     position: absolute;
     top: 12%;
-    left: 40%;
+    left: 45%;
     transform: translate(-40%, -40%);
     font-size: 28px;
   }
@@ -87,7 +87,7 @@ main {
 
   .bottom{
     position: absolute;
-    top: 65%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, 100%);
     font-size: 16px;
@@ -121,8 +121,8 @@ button {
     border: none;
     border-radius: 45%;
     cursor: pointer;
-    border: 1px solid rgb(223, 219, 219);
-    outline: 1px double rgb(189, 189, 189);
+    border: 1px solid rgb(167, 165, 165);
+    outline: 1px double rgb(247, 245, 245);
 }
 button:hover {
         /* background-image: red; */
@@ -142,7 +142,7 @@ button:hover {
 
     width: 20%;
     height:5%;
-    animation: pulse 5s infinite;
+    animation: pulse 3s infinite;
     margin-top: 2%;
     margin-bottom: 3%;
     margin-right: 50%;

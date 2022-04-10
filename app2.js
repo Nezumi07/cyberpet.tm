@@ -23,7 +23,7 @@ let thirstValue = document.getElementById("thirstValue");
 let boredomValue = document.getElementById("boredomValue");
 let petNameType = document.getElementById("petNameType")
 
-
+let imageScreen = document.getElementById("disppear")
 
 let min = 5;
 let mid = 8;
@@ -83,7 +83,11 @@ class Cyberpet{
 class Cat extends Cyberpet {
     constructor(name, meow){
         super(name);
+        this._imageSrc = "images/cat/";
         this._meow = meow;
+    }
+    get imageSrc(){
+        return this._imageSrc;
     }
     get meow(){
         return this._meow;
@@ -99,11 +103,15 @@ class Dog extends Cyberpet{
     constructor (name,woof){
         super(name);
         this._woof = woof;
-    }
-    get woof(){
-        return this._woof;
-    }
-    speak(){
+        this._imageSrc = "images/dog/";
+        }
+        get imageSrc(){
+        return this._imageSrc;
+        }
+        get woof(){
+            return this._woof;
+        }
+        speak(){
         petWoof.play();
         petWoof.currentTime = 0;
         console.log("dog is barking mad")
@@ -114,11 +122,15 @@ class Rabbit extends Cyberpet{
     constructor (name,woof){ // change woof
         super(name);
         this._woof = woof;
-    }
-    get woof(){
+        this._imageSrc = "images/rabbit/";
+        }
+        get imageSrc(){
+        return this._imageSrc;
+        }
+        get woof(){
         return this._woof;
-    }
-    speak(){
+        }
+        speak(){
         petWoof.play();
         petWoof.currentTime = 0;
         comsole.log("dog is barking mad")
@@ -140,11 +152,13 @@ function chooseAction(){
     if  (action == "p"){
         myPet.fun();
         petPlay.play();
+        imageScreen.src = myPet.imageSrc + "sleep.png"
         petPlay.currentTime = 0;
     }
     else if(action == "e"){
         myPet.eat();
         petFeed.play();
+        imageScreen.src = myPet.imageSrc + "fat.png"
         petFeed.currentTime = 0;
     }
     else if(action == "d"){
@@ -158,31 +172,38 @@ function chooseAction(){
     action = "";
 }
 
+
+
 function myPetCreate(){
     if(myPetCreated == 0){
         petType = prompt("Please Select Cyberpet Type: 1 for a Dog. 2 for a Cat. Press Any other key for a Rabbit");
         if(petType == 1){
-            bgm1.play();
+            // bgm1.play();
+            
             pet = "Dog";
             myPet = new Dog(petName, pet);
         }
         else if(petType == 2){
-            bgm2.play();
+            // bgm2.play();
             pet = "Cat";
             myPet = new Cat(petName, pet);
+            // imageSrc = "images/cat/"
         }
         else{
-            bgm3.play();
+            // bgm3.play();
             pet = "Rabbit";
             myPet = new Rabbit(petName, pet);
         }
         console.log(`pet type is ${petType}`);
         console.log(`pet is a ${pet}`);
         
+    
         petName = prompt(`Please name your ${pet}`)
-        
+        console.log(imageScreen.src)
+
         console.log(`starting hunger is ${myPet.hunger}`);
         petNameType.textContent = `${petName} the ${pet}`
+        imageScreen.src = myPet.imageSrc + "main.png"
         logOutput()    
 
     
@@ -238,10 +259,10 @@ function typeWriter() {
   }
 }
 
-let element = document.getElementById("disappear");
-element.remove();
+// let element = document.getElementById("disappear");
+// element.remove();
 
-oc
+
 
 
 
@@ -262,4 +283,3 @@ oc
 //     action = prompt(`What would you like to do?:\np for play, e to feed, d to give a drink.\nOR any other key to end the game`)
 //     chooseAction()
 // }ument.getElementById("disappear");
-element.remove();
