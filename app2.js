@@ -8,6 +8,7 @@ let petFeed = new Audio("sounds/feed.wav");
 let petMeow = new Audio("sounds/meow.wav");
 let petWoof = new Audio("sounds/howl.wav");
 let intro = new Audio("sounds/intro.mp3");
+let petLevel = new Audio("sounds/levelup.mp3");
 
 //Music
 
@@ -23,12 +24,19 @@ let thirstValue = document.getElementById("thirstValue");
 let boredomValue = document.getElementById("boredomValue");
 let petNameType = document.getElementById("petNameType")
 
-let imageScreen = document.getElementById("disppear")
+let imageScreen = document.getElementById("screen")
+
+
 
 document.addEventListener("click", (event) => {
     action = (event.target).id;
     chooseAction()
 });
+
+function runPowerOn(){
+    imageScreen.src = "images/purple.gif"
+    document.getElementById("intro").textContent = "Press C Key to START"
+}
 
 let min = 5;
 let mid = 8;
@@ -124,7 +132,6 @@ class Dog extends Cyberpet{
         console.log("dog is barking mad")
     }
 }
-
 class Rabbit extends Cyberpet{
     constructor (name,woof){ // change woof
         super(name);
@@ -187,8 +194,6 @@ function chooseAction(){
     action = "";
 }
 
-
-
 function myPetCreate(){
     if(myPetCreated == 0){
         petType = prompt("Please Select Cyberpet Type: 1 for a Dog. 2 for a Cat. Press Any other key for a Rabbit");
@@ -220,9 +225,8 @@ function myPetCreate(){
         console.log(`starting hunger is ${myPet.hunger}`);
         petNameType.textContent = `${petName} the ${pet}`
         imageScreen.src = myPet.imageSrc + "main.png"
+        document.getElementById("intro").textContent = ""
         logOutput()    
-
-    
     }
     else{
         console.log(`You have already created a pet named ${petName}`);
@@ -261,7 +265,7 @@ document.addEventListener("keydown", (event) => {
     action = event.key;
     console.log(action);
     chooseAction();
-})
+});
 
 let i = 0;
 let txt = "Press C Key to START";

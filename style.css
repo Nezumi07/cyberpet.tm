@@ -39,7 +39,7 @@ main {
     rgb(187, 185, 185)); */
     text-align: center;
     padding: 1px ; 
-    height: 570px;
+    height: 550px;
     width: 350px;
     margin-top: 3%;
 
@@ -78,16 +78,16 @@ main {
 
 .top{
     position: absolute;
-    top: 12%;
+    top: 9%;
     left: 45%;
     transform: translate(-40%, -40%);
-    font-size: 28px;
+    font-size: 27px;
   }
 
 
   .bottom{
     position: absolute;
-    top: 10%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, 100%);
     font-size: 16px;
@@ -105,7 +105,7 @@ h2 {
     font-size: 35px;
     letter-spacing: 1px;
     /* padding-right: 25%; */
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     color:rgb(5, 65, 231);
     
 }
@@ -208,8 +208,8 @@ color:red;
 
 img {
 
-    width: 315px;
-    height: 290px;
+    width: 320px;
+    height: 330px;
     border: 8px solid grey;
     outline: 4px solid darkgrey;
     border-radius: 10%;
