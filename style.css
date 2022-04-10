@@ -87,7 +87,7 @@ main {
 
   .bottom{
     position: absolute;
-    top: 68%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, 100%);
     font-size: 16px;
