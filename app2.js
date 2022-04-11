@@ -200,22 +200,24 @@ function chooseAction(){
 
 function myPetCreate(){
     if(myPetCreated == 0){
-        petType = prompt("Please Select Cyberpet Type: 1 for a Dog. 2 for a Cat. Press Any other key for a Rabbit");
+        petType = prompt("Please Select Cyberpet Type: 1 for a Dog. 2 for a Cat.                    Press ANY other key for a Rabbit.");
         if(petType == 1){
-            // bgm1.play();
-            // bgm1.volume = 0.2;
+            bgm1.play();
+            bgm1.volume = 0.2;
             
             pet = "Dog";
             myPet = new Dog(petName, pet);
         }
         else if(petType == 2){
-            // bgm2.play();
+            bgm2.play();
+            bgm2.volume = 0.2;
             pet = "Cat";
             myPet = new Cat(petName, pet);
             // imageSrc = "images/cat/"
         }
         else{
-            // bgm3.play();
+            bgm3.play();
+            bgm3.volume = 0.2;
             pet = "Rabbit";
             myPet = new Rabbit(petName, pet);
         }

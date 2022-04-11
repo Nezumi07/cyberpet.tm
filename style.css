@@ -38,10 +38,10 @@ main {
     /* background-image: radial-gradient(lightgray,
     rgb(187, 185, 185)); */
     text-align: center;
-    padding: 1px ; 
+    padding: px ; 
     height: 550px;
     width: 350px;
-    margin-top: 3%;
+    margin-top: 1%;
 
     display: flex;
     align-items: center;
@@ -136,15 +136,46 @@ button:hover {
         /* transition-timing-function: ease-in-out; */
         /* border-radius: 90%; */
 }      
+input{
 
+  width:200px;
+  height:30px;
+  animation: pulse 7s infinite;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  /* margin-left: 60%; */
+  border-radius: 10%;
+  /* animation: glow 3s infinite; */
+  font-family: 'VT323' , serif;
+}
+
+input:hover {
+  /* background-image: red; */
+  color: blue;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.powerReset{
+
+  display:flex;
+  
+}
+
+  /* border: 5px; */
+  /* border-color: aqua; */
+  /* transition: border-radius 5s, width 1s, height 1s, background-color 1s; */
+  /* transition-timing-function: ease-in-out; */
+  /* border-radius: 90%; */
+ 
   
 .powerOn {
 
-    width: 20%;
-    height:5%;
+    width: 80px;
+    height:40px;
     animation: pulse 3s infinite;
-    margin-top: 2%;
-    margin-bottom: 3%;
+    margin-top: 1%;
+    margin-bottom: 5%;
     margin-right: 50%;
     border-radius: 10%
 }
